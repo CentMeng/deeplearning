@@ -15,11 +15,11 @@
 	
 	举例：
 	
-	| rid | age |	income |	student | credit_rating | buys |
-	| --------- |:---------:| -----:|-----:|-----:|-----:|
-| 1 | 	youth |	high	| no |	fair |	no |
-| 2 |	youth | 	high	| no |	excellent | no |
-| 3 |	middle_aged | 	high |	no | fair | yes |
+| rid | age |	income |	student | credit_rating | buys |
+| --------- |:---------:| -----:|-----:|-----:|-----:|
+| 1 | youth | high | no |	fair |	no |
+| 2 | youth | high | no |	excellent | no |
+| 3 |	middle_aged | high | no | fair | yes |
 | 4 |	senior |	medium |	no | fair | yes |
 | 5 |senior |	low | yes | fair | yes |
 | 6 |	senior | low | yes | excellent |	no |
