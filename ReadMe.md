@@ -15,7 +15,14 @@
 |…………………………………|  knn.py sklearn虹膜数据和模型
 
 |…………………………………|  knn2.py 自写算法和自定义数据集
-     
+
+|………………………|  svm 支持向量机
+
+|…………………………………|  svm.py 简单的支持向量机示例
+
+|…………………………………|  svm2.py 使用随机生成数的支持向量机，并画出平面图
+
+|…………………………………|  svm3.py 人脸识别示例
 
 # Python2和Python3区别
 参考链接：[https://docs.python.org/release/3.1.3/whatsnew/3.0.html](https://docs.python.org/release/3.1.3/whatsnew/3.0.html)
