@@ -24,10 +24,10 @@ def loadDataSet(fileName,split,columns,trainingSet=[],testSet=[]):
     with open(fileName,'rt') as file:
         lines = csv.reader(file)
         dataSet = list(lines)
-        for row in range(len(dataSet)-1):
+        for row in range(len(dataSet)-1): # for循环从0开始
             for column in range(columns):
                 dataSet[row][column] = float(dataSet[row][column])
-            if random.random()<split:
+            if random.random()<split: # random.random()返回的是0-1之间的数据
                 trainingSet.append(dataSet[row])
             else:
                 testSet.append(dataSet[row])
@@ -39,7 +39,7 @@ def euclideanDistance(instance1,instance2,length):
         distance += pow((instance1[i]-instance2[i]),2)
     return math.sqrt(distance)
 
-# 取k个结果
+# 取k个结果 trainingSet是训练集合，testInstance是要预测的单条数据，k是取几个近邻的
 def getNeighbors(trainingSet,testInstance,k):
     distances = []
     length = len(testInstance)-1
@@ -64,7 +64,7 @@ def getResponse(neighbors):
     sorteVotes = sorted(classVotes.items(),key = operator.itemgetter(1),reverse=True)
     return sorteVotes[0][0]
 
-# 训练集正确率
+# 测试集正确率
 def getAccuary(testSet,predictions):
     correct = 0
     for x in range(len(testSet)):
@@ -78,11 +78,12 @@ def main():
     # 2/3数据为训练集，1/3数据为测试集
     split = 0.67
     loadDataSet(r'/users/vincent/Documents/project/python/deeplearning/net/msj/superlearn/classification/knn/resources/iris.csv',split,4,trainingSet,testSet) #加r是忽略字符串里面特殊符号
-    print('TranSet: ',repr(len(trainingSet)))
+    print('TranSet: ',repr(len(trainingSet))) #repr() 函数将对象转化为供解释器读取的形式，str出来的值是给人看的字符串，repr出来的值是给机器看的
     print('TestSet: ',repr(len(testSet)))
 
     predictions = []
     k = 3
+    # 用测试集测试数据
     for x in range(len(testSet)):
         neighbors = getNeighbors(trainingSet,testSet[x],k)
         result = getResponse(neighbors)
