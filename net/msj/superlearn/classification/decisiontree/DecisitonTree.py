@@ -19,7 +19,7 @@ from sklearn.externals.six import StringIO # io操作
 #b、t、+、U这四个字符，与以上的文件打开模式组合使用，二进制模式，文本模式，读写模式、通用换行符，根据实际情况组合使用
 
 # 导入数据
-allData = open(r'/users/vincent/Documents/project/python/deeplearning/net/msj/decisiontree/resources/decisiontree.csv','rt')
+allData = open(r'/users/vincent/Documents/project/python/deeplearning/net/msj/superlearn/classification/decisiontree/resources/decisiontree.csv','rt')
 reader = csv.reader(allData)
 headers = next(reader)
 print(headers)
@@ -68,7 +68,7 @@ print("clf：" + str(clf)) # 打印出分离器一些参数，可以在声明时
 
 #打印tree
 #输出tree的dot格式图，使用Graphviz转换成图像
-with open("/users/vincent/Documents/project/python/deeplearning/net/msj/decisiontree/resources/allData.dot",'w') as f:
+with open("/users/vincent/Documents/project/python/deeplearning/net/msj/superlearn/classification/decisiontree/resources/allData.dot",'w') as f:
   f = tree.export_graphviz(clf,feature_names=vec.get_feature_names(), out_file = f) #feature_names=vec.get_feature_names()为了还原矩阵以前特征值
 
 
