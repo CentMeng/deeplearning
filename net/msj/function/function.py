@@ -8,4 +8,3 @@ def ComputeEuclideanDistance(x1,y1,x2,y2):
 d_ag = ComputeEuclideanDistance(3,104,18,90)
 
 print(d_ag)
- 
