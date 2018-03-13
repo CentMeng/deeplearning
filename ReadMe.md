@@ -33,6 +33,7 @@
 |…………………………………|  testNeuralNetwork.py 神经网络算法测试，异或算法测试示例
 
 |…………………………………|  VisualizeDigits.py 查看图像数字识别训练集图片
+|…………………………………|  非线性转化方程.md 非线性转化方程讲解
 
 # Python2和Python3区别
 参考链接：[https://docs.python.org/release/3.1.3/whatsnew/3.0.html](https://docs.python.org/release/3.1.3/whatsnew/3.0.html)
